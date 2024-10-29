@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Leitura_EOF {
-        public static void main(String[] args) {
+        
             try{
                 File arquivo = new File("Aula4_lacos/Exercicios_beecrowd/Teste.txt");
                 Scanner sc = new Scanner(arquivo);
