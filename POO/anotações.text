@@ -1,0 +1,2 @@
+private --> objeto ou metodo que ser´autilizado sóinternamente, cada um possui seu estado 
+public --> mensagem que um objeto é capz de responder
