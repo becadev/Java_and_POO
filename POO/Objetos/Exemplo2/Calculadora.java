@@ -1,8 +1,5 @@
 // USANDO MATH
-
-package OBJETOS.Exemplo2;
-import java.Math;
-
+package POO.Objetos.Exemplo2;
 
 public class Calculadora {  // criação de class para instanciar os objetos, no outro programa inicial será feito um new criando um objeto de acordo com as instancias dessa class
     private double valor;
@@ -15,22 +12,19 @@ public class Calculadora {  // criação de class para instanciar os objetos, no
         return this.valor;
     }
 
-    public void somar(double valor){
-        this.valor += valor;
+    public void somar(double v1, double v2){
+        this.valor = v1 + v2;
     }
-
-    public void subtrair(double valor){
-        this.valor -= valor;
+    public void subtrair(double v1,double v2){
+        this.valor = v1 - v2;
     }
-
-    public double multiplicar(double valor){    //pode ser void ou double se for double deve colocar o return
-        this.valor *= valor;
+    public double multiplicar(double v1,double v2){    //pode ser void ou double se for double deve colocar o return
+        this.valor = v1 * v2;
         return this.valor;
     }
-
-    public void dividir(double valor){
-        if (valor != 0){
-            this.valor /= valor;
+    public void dividir(double v1,double v2){
+        if (v2 != 0 || v1!= 0){
+            this.valor = v1 / v2;
         }
     }
 }

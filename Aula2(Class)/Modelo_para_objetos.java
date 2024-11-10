@@ -1,4 +1,7 @@
 // Modelo para objetos
+
+import OBJETOS.Exemplo1.Dado;
+
 public class Modelo_para_objetos {
   private int face = 1; // Atributo
   // unica forma de alterar a face é chamando o método de rolar()
