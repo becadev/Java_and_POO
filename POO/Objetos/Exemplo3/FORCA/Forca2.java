@@ -6,40 +6,45 @@ import java.util.ArrayList;
 
 public class Forca2 {
     private int tentativasRestantes;
+    private String palavra_e_dica;
     private String palavra;
+    private String dica;
     private String jogada;
     private ArrayList<Character> letrastentadas;
     private String [] espacos;
 
-    private String escolherPalavra(){
+
+    private String [] escolherPalavra(){
         try {
             String[] linhas = Files.readAllLines(Paths.get("POO/Objetos/Exemplo3/FORCA/Palavras.txt")).toArray(new String[0]);
-            return linhas[(new Random()).nextInt(linhas.length)]; // vai ver o tamanho do arquivo e retornar um valor aleatorio dentro deste intervalo de valores
+            String linhaSorteada =  linhas[(new Random()).nextInt(linhas.length)] ; // vai ver o tamanho do arquivo e retornar um valor aleatorio dentro deste intervalo de valores
+            String[] palavra_e_dica = linhaSorteada.split(","); // Vai separar as linhas
+            return palavra_e_dica;
         } catch (IOException e) {
             e.printStackTrace();
-            return "Error: " ; 
+            return new String[]{"Error", " "};
         }   
     }
 
     public void iniciar(){
-        this.palavra = escolherPalavra();
+        String [] palavra_e_dica = escolherPalavra();
+        this.palavra = palavra_e_dica[0];
+        this.dica = palavra_e_dica[1];
         this.tentativasRestantes = 6;
         this.jogada = " ";
         this.letrastentadas = new ArrayList<>();
-        //this.letras = new char[26];
         this.espacos =  new String[palavra.length()]; // Cria uma array para mostrar ao user
 
         for (int i = 0; i < palavra.length(); i++) { // Array com os espaços vazios mostrando o tamanho da palavra ao user
             espacos[i] = "_";  
         }
-
     }
     public String tentativa(char letra){ // Diferente das outras func ela não pode ser Void pois deverá retornar um valor para a func Iniciar()
         int tamanho = palavra.length();
         boolean achou = false;
 
         
-        if (this.letrastentadas.contains(letra)) { // Avisa ao jogador para que ele não perca uma tentativa com uma jogada já realizada
+        if (this.letrastentadas.contains(letra)) { // Avisa ao jogador para que ele não perca uma tentativa com uma jogada já realizada sendo burro
             return "Você já tentou essa letra.";
         }else{this.letrastentadas.add(letra);}
         
@@ -52,7 +57,7 @@ public class Forca2 {
                 }
             }
             
-        if (achou==(false)){ // se achou ainda for falsa ele entrará aqui
+        if (achou==(false)){ // se achou ainda for falsa ele entra aqui
             this.tentativasRestantes -= 1;
         }
         else if (this.tentativasRestantes == 0) {
@@ -61,8 +66,9 @@ public class Forca2 {
         else if (Vitoria()) {
             return "Parabéns, você venceu!";
         }
-        this.jogada = String.join(" ", this.espacos) + " | Tentativas restantes: " + this.tentativasRestantes +
-         "| Letras tentadas: " +  this.letrastentadas;
+        this.jogada = "  "+ String.join(" ", this.espacos)+ "\n" + 
+        " | Tentativas restantes: " + this.tentativasRestantes + "\n"+
+        " | Letras tentadas: " +   this.letrastentadas;
         
         return this.jogada;
     }
@@ -78,6 +84,9 @@ public class Forca2 {
 
     public int getTentativas_Restantes() { // será usado para inicializar o loop do jogo
         return this.tentativasRestantes;
+    }
+    public String getDica() { // vai mostrar a dica para o jogador
+        return this.dica;
     }
 
     public String getPalavra(){ // mostrará a palavra caso o jogador perder

@@ -1,10 +1,50 @@
-escola
-carro
-sol
-praia
-felicidade
-amor
-abacaxi
-floresta
-livro
-computador
+computador,Dispositivo eletrônico para processar informações
+sol,Estrela central do nosso sistema solar
+banana,Fruta amarela e curva
+oceano,Grande massa de água salgada
+pinguim,Ave que não voa e vive em regiões geladas
+carro,Veículo de quatro rodas para transporte
+internet,Rede global que conecta computadores
+telefone,Dispositivo usado para realizar chamadas
+futebol,Esporte jogado com uma bola em campo
+borboleta,Inseto com asas coloridas que voa
+girafa,Animal de pescoço longo encontrado na savana
+diamante,Pedra preciosa de alto valor
+biblioteca,Lugar onde se emprestam livros
+cachorro,Animal de estimação conhecido como melhor amigo do homem
+montanha,Grande elevação natural de terra
+escola,Local de ensino para crianças e jovens
+refrigerante,Bebida gaseificada geralmente doce
+bicicleta,Meio de transporte de duas rodas movido a pedal
+livro,Objeto cheio de páginas com informações ou histórias
+quadro,Peça de arte pendurada na parede
+rio,Curso natural de água doce
+computador,Dispositivo para acessar a internet e trabalhar
+chave,Objeto usado para abrir portas
+bateria,Fonte de energia para dispositivos eletrônicos
+lua,Satélite natural da Terra
+jardim,Espaço com plantas e flores
+avião,Veículo que voa pelos céus
+montanha-russa,Atração de parque com trilhos e altas velocidades
+dente,Parte do corpo usada para mastigar
+floresta,Área densa de árvores e vegetação
+coração,Órgão que bombeia sangue no corpo
+teatro,Local onde são apresentadas peças e espetáculos
+praia,Área de areia ao lado do mar
+cozinheiro,Profissional que prepara alimentos
+vulcão,Montanha que libera lava e gases
+tigre,Felino grande com listras pretas
+violão,Instrumento musical de cordas
+foguete,Veículo usado para explorar o espaço
+relógio,Dispositivo que indica o tempo
+pizza,Prato italiano famoso feito com massa, molho e queijo
+abacaxi,Fruta tropical com casca espinhosa
+chocolate,Doce feito a partir do cacau
+tartaruga,Animal com casco duro e movimento lento
+esmeralda,Pedra preciosa de cor verde
+café,Bebida quente feita de grãos torrados
+hospital,Local para tratamento de saúde
+mochila,Bolsa usada para carregar livros e pertences
+ônibus,Veículo grande usado para transporte coletivo
+deserto,Área árida com pouca vegetação
+castelo,Construção medieval usada como fortaleza
