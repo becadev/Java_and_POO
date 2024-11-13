@@ -8,13 +8,22 @@ public class Jogo_da_forca {
 
         System.out.println("Bem-Vindo ao jogo da forca! ");
         System.out.printf("A dica da palavra é:  %s\n", jogo.getDica());
+       
+        int qtd_de_letras = jogo.qtd_letra();
+        System.out.print( "Quantidade de letras da palavra: "+ jogo.qtd_letra()+"\n");
+
+        for (int i = 0 ;  i < qtd_de_letras; i ++){
+            System.out.print(" _");
+        }
+        System.out.println("");
         System.out.print("Digite uma letra: ");
         Scanner sc = new Scanner(System.in);
+
 
         while(!jogo.Vitoria() && jogo.getTentativas_Restantes() > 0){// o loop irá acontecer enquanto o jogador não vencer e suas chances não forem zeradas
             char letra = sc.next().charAt(0);
             String resultado = jogo.tentativa(letra); // recebe a letra digitada pelo jogador e realiza a tentativa
-            
+        
             System.out.println(resultado);
 
             if (jogo.getTentativas_Restantes()==0){
@@ -26,7 +35,7 @@ public class Jogo_da_forca {
                 break;
             }
             System.out.print("Digite uma letra: ");
-        } //sc.close(); 
+        } 
     }
 }
 

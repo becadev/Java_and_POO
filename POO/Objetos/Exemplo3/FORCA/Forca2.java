@@ -36,9 +36,15 @@ public class Forca2 {
         this.espacos =  new String[palavra.length()]; // Cria uma array para mostrar ao user
 
         for (int i = 0; i < palavra.length(); i++) { // Array com os espaços vazios mostrando o tamanho da palavra ao user
-            espacos[i] = "_";  
+            this.espacos[i] = "_";  
         }
+        
     }
+    // public String qtd_letra(String espacos[]){
+
+    // }
+
+
     public String tentativa(char letra){ // Diferente das outras func ela não pode ser Void pois deverá retornar um valor para a func Iniciar()
         int tamanho = palavra.length();
         boolean achou = false;
@@ -71,6 +77,10 @@ public class Forca2 {
         " | Letras tentadas: " +   this.letrastentadas;
         
         return this.jogada;
+    }
+
+    public int qtd_letra(){
+        return palavra.length();
     }
 
     public boolean Vitoria(){ // verifica se o jogador venceu

@@ -24,7 +24,7 @@ chave,Objeto usado para abrir portas
 bateria,Fonte de energia para dispositivos eletrônicos
 lua,Satélite natural da Terra
 jardim,Espaço com plantas e flores
-avião,Veículo que voa pelos céus
+aviao,Veículo que voa pelos céus
 montanha-russa,Atração de parque com trilhos e altas velocidades
 dente,Parte do corpo usada para mastigar
 floresta,Área densa de árvores e vegetação
