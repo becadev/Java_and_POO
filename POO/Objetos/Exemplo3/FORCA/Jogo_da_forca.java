@@ -4,7 +4,9 @@ import java.util.Scanner;
 public class Jogo_da_forca {
     public static void main(String[] args){
         Forca2 jogo = new Forca2();
+        Boneco boneco = new Boneco();
         jogo.iniciar();
+       
 
         System.out.println("Bem-Vindo ao jogo da forca! ");
         System.out.printf("A dica da palavra é:  %s\n", jogo.getDica());
@@ -16,7 +18,7 @@ public class Jogo_da_forca {
             System.out.print(" _");
         }
         System.out.println("");
-        System.out.print("Digite uma letra: ");
+        System.out.print(" Digite uma letra: ");
         Scanner sc = new Scanner(System.in);
 
 
@@ -26,6 +28,14 @@ public class Jogo_da_forca {
         
             System.out.println(resultado);
 
+            for (int i = 0 ; i < 5 ; i++){
+                for (int k = 0 ; k < 5 ; k++){
+                    System.out.printf(boneco.getBoneco(i,k));
+                }
+                System.out.println("");
+            }
+
+
             if (jogo.getTentativas_Restantes()==0){
                 System.out.printf("  Você perdeu, a palvra certa era: %s\n", jogo.getPalavra());
                 break;
@@ -34,7 +44,7 @@ public class Jogo_da_forca {
                 System.out.printf("A palava é: %s\n", jogo.getPalavra());
                 break;
             }
-            System.out.print("Digite uma letra: ");
+            System.out.print(" Digite uma letra: ");
         } 
     }
 }

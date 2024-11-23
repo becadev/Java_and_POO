@@ -9,6 +9,7 @@ public class Forca2 {
     private String palavra_e_dica;
     private String palavra;
     private String dica;
+    private boolean achou;
     private String jogada;
     private ArrayList<Character> letrastentadas;
     private String [] espacos;
@@ -32,6 +33,7 @@ public class Forca2 {
         this.dica = palavra_e_dica[1];
         this.tentativasRestantes = 6;
         this.jogada = " ";
+        this.achou = false;
         this.letrastentadas = new ArrayList<>();
         this.espacos =  new String[palavra.length()]; // Cria uma array para mostrar ao user
 
@@ -47,7 +49,7 @@ public class Forca2 {
 
     public String tentativa(char letra){ // Diferente das outras func ela não pode ser Void pois deverá retornar um valor para a func Iniciar()
         int tamanho = palavra.length();
-        boolean achou = false;
+        this.achou = false;
 
         
         if (this.letrastentadas.contains(letra)) { // Avisa ao jogador para que ele não perca uma tentativa com uma jogada já realizada sendo burro
@@ -59,7 +61,7 @@ public class Forca2 {
             for (int i = 0 ; i < tamanho ; i++){
                 if (palavra.charAt(i) == letra) {
                     this.espacos[i] = String.valueOf(letra);  // substitui espaco pela letra tentada
-                    achou  = true;
+                    this.achou  = true;
                 }
             }
             
@@ -103,5 +105,6 @@ public class Forca2 {
         String palavrafinal = this.palavra;
         return palavrafinal;
     }
+
 }
 
