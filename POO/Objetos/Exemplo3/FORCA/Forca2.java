@@ -61,7 +61,7 @@ public class Forca2 {
             for (int i = 0 ; i < tamanho ; i++){
                 if (palavra.charAt(i) == letra) {
                     this.espacos[i] = String.valueOf(letra);  // substitui espaco pela letra tentada
-                    this.achou  = true;
+                    achou  = true;
                 }
             }
             
