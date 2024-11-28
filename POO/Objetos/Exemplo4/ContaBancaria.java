@@ -38,6 +38,7 @@ public class ContaBancaria {
     // Verifica se há saldo suficiente, se sim, retorna extrato de saque, senão retorna saldo insuficiente
     public void realizarSaque(double valorSaque){
         this.saldo -=  valorSaque;
+        this.saque += valorSaque;
         if (this.saldo < 0){
             saldoInsuficiente();
         }
