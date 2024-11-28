@@ -4,56 +4,70 @@
 package POO.Objetos.Exemplo4;
 
 public class ContaBancaria {
-    private String Numero_da_Conta;
+    // Atributos
+    private String numeroConta;
     private String NomeTitular;
-    private double Saldo;
-    private double Saque;
-    private String dados;
+    private double saldo;
+    private double saque;
+    private double depositos;
 
-    public void Dados(){
-        Extrato dados = new Extrato();
-        this.Numero_da_Conta = " ";
-        this.NomeTitular = " ";
-        this.Saldo = 0.0;
-        this.Saque = 0.0;
-    }
-    // [1] Saldo [2] Saque [3] Extrato
-    public void Operacao (String operacao){
-        if (operacao.equals("1")){
-            getSaldo();
+        // Construtor
+        public ContaBancaria(String numeroDaConta, String nomeTitular) {
+            this.numeroConta = numeroDaConta;
+            this.NomeTitular = nomeTitular;
+            this.saque = 0.0;
+            this.depositos = 0.0;
+            this.saldo = 1000.0;
         }
-        if (operacao.equals("3")){
-            Extrato();
+    
+    
+    // [1] saldo [2] saque [3] Extrato
+    // Verifica a Operação que será realizada
+    // public void Operacao (String operacao){
+    //     if (operacao.equals("1")){
+    //         getSaldo();
+    //     }
+    //     if (operacao.equals("3")){
+    //         realizarDeposito();
+    //     }
+    //     if (operacao.equals("4")){
+    //         exibirExtrato();
+    //     }
+    // }
+
+    // Verifica se há saldo suficiente, se sim, retorna extrato de saque, senão retorna saldo insuficiente
+    public void realizarSaque(double valorSaque){
+        this.saldo -=  valorSaque;
+        if (this.saldo < 0){
+            saldoInsuficiente();
         }
-
     }
 
-    public void Saque(double valor){
-        getSaldo(this.Saldo);
+    public void realizarDeposito(double valorDeposito){
+        this.saldo += valorDeposito;
+        this.depositos += valorDeposito;
     }
 
-    public String getSaldo(double Saldo){
-        this.Saldo -=  this.Saque;
-        if (this.Saldo < 0){
-            return "Saldo Insuficiente" + this.Saldo;
-        }
-        String Situacao = Extrato();
-        return Situacao;
+    public String saldoInsuficiente(){
+        String situacao = "Saldo infuficiente para esse valor de saque \n SALDO: " + this.saldo;
+        return situacao;
     }
-    public double getNumero_Conta(){
-        return this.Numero_da_Conta;
+
+    public double getSaldo(){
+        return this.saldo;
     }
-    public double getNome_Titular(){
+    public String getNumero_Conta(){
+        return this.numeroConta;
+    }
+    public String getNome_Titular(){
         return this.NomeTitular;
     }
 
-    public double Extrato(){
-        return dados.getExtrato();
+    // Vai até a class Extrato para formatar e retornar o extrato
+    public String exibirExtrato(){
+        Extrato geracaoDeExtrato = new Extrato();
+        geracaoDeExtrato.gerarExtrato(this.saldo, this.saque, this.depositos, this.numeroConta, this.NomeTitular);
+
+        return geracaoDeExtrato.getExtrato(); 
     }
-
-   
-
-
-
-
 }
