@@ -8,7 +8,7 @@ public class Disciplina {
     private double mediaFinal;
     private double mediaParcial;
 
-    public void  disciplina(String nomeDaDisciplina){
+    public void disciplina(String nomeDaDisciplina){
         this.nomeDisciplina = nomeDaDisciplina;
     }
     public void caclularMediaParcial(double n1, double n2){
@@ -27,3 +27,6 @@ public class Disciplina {
         return this.mediaParcial;
     }
 }
+
+
+// class Integer 

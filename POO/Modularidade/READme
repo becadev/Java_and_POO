@@ -1,0 +1,14 @@
+Modularidade: como dividir a aplicação em classes 
+Hierarquia: 
+    - extends : vai herdar tudo que a class de fora tem(ex o carro)
+
+``` java
+public class CarroInteligente extends Carro {
+    public CarroInteligente(int velocidadeInicial) {
+        super(velocidadeInicial);// faz referencia ao metodo construtor de carro
+        }
+    public void estaciona() {
+    // código mágico para estacionar sozinho
+    }
+}
+```
