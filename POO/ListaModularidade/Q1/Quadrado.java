@@ -6,7 +6,7 @@ public class Quadrado extends Retangulo{
     }
     @Override
     public String toString(){
-        StringBuilder dados = new StringBuilder().append("\n");
+        StringBuilder dados = new StringBuilder();
         dados.append("base: ").append(String.format("%.2f",getBase())).append("\n");
         dados.append("altura: ").append(String.format("%.2f",(getAltura()))).append("\n");
         dados.append("diagonal: ").append(String.format("%.2f",calcDiagonal())).append("\n");

@@ -7,8 +7,11 @@ public class Main {
         double b = sc.nextDouble();
         double h = sc.nextDouble();
         
-        Retangulo retangulo = new Retangulo(b, h);
-        Retangulo quadrado = new Quadrado(b);
+        Retangulo retangulo = new Retangulo();
+        Retangulo quadrado = new Quadrado();
+
+        retangulo.Retangulo(b,h);
+        quadrado.Quadrado(b);
 
         retangulo.getAltura();
         retangulo.getBase();
