@@ -1,6 +1,6 @@
 package POO.ListaModularidade.Q3;
 
-public abstract class Funcionario{
+public abstract class Funcionario{ // parte que repete em ambas class (engenherio e motoristas)
    protected String nome;
    protected String email;
    protected String fone;
