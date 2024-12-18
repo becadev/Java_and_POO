@@ -1,6 +1,6 @@
 package POO.ListaModularidade.Q3;
 
-public class Funcionario{
+public abstract class Funcionario{
    protected String nome;
    protected String email;
    protected String fone;
