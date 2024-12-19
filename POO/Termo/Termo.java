@@ -42,7 +42,7 @@ public class Termo{
             }
 
         }
-        return " "; // é para retornar o esatado dos blocos
+        return " "; // é para retornar o estado dos blocos
     }
 }
 
