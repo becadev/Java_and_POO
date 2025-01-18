@@ -7,3 +7,13 @@ public --> mensagem que um objeto é capz de responder
 
 -- linkedlist
 -- comparable
+
+public String toString() {
+        return String.format(
+            "Informações Frete Terrestre:%n" +
+            "Valor do Frete: R$ %.2f%n" +
+            "Peso: %.2f Kg%n" +
+            "Distância: %.2f Km",
+            getFrete(), this.peso, this.distancia
+        );
+}
