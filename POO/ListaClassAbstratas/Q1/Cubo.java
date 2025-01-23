@@ -7,7 +7,7 @@ public class Cubo extends Figura{
     public Cubo(double lado){
         this.lado = lado;
     }
-    @Override
+    // @Override
     public double getVolume(){
         return Math.pow(this.lado,3);
     }

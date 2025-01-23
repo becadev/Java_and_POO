@@ -4,6 +4,7 @@ public class Servico extends Item{
     private int tempo;
 
     public Servico(String d, int t){
+        super(descricao, q);
         this.tempo = t;
     }
     public double getPreco(){
@@ -18,3 +19,4 @@ public class Servico extends Item{
         );
     }
 }
+// Streams java
