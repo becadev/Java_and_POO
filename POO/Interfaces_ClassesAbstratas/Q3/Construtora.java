@@ -1,4 +1,4 @@
-package Q3;
+package POO.Interfaces_ClassesAbstratas.Q3;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class Construtora{
         // this.motoristas = new ArrayList<>();
         // this.engenheiros = new ArrayList<>();
     }
-    public void inserir(Funcionario f){
+    public void inserir(Funcionario f){ // adiciona funcionario a lista de  funcionarios
         this.funcs.add(f);
     }
 
