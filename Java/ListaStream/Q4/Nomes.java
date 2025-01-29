@@ -15,6 +15,7 @@ public class Nomes {
         // this.nomes.stream()
         // .collect(Collectors.toSet());
         String nome =  this.nomes.stream()
+        .distinc()
         .collect(Collectors.joining(", "));
         return nome;
     }
