@@ -17,3 +17,6 @@ public String toString() {
             getFrete(), this.peso, this.distancia
         );
 }
+
+git pull --rebase origin main -> aplica as suas mudanças locais 
+sobre as mudanças mais recentes da branch remota. Isso resulta em um histórico linear
